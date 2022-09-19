@@ -56,5 +56,7 @@ Diagramme d'objet
 ## Documentation
 ### JavaDoc
 [Registry](https://docs.oracle.com/en/java/javase/18/docs/api/java.rmi/java/rmi/registry/Registry.html "JAVA Doc - Registry")
+
 [LocateRegistry](https://docs.oracle.com/en/java/javase/18/docs/api/java.rmi/java/rmi/registry/LocateRegistry.html "JAVA Doc - LocateRegistry")
+
 [Remote](https://docs.oracle.com/en/java/javase/18/docs/api/java.rmi/java/rmi/Remote.html "JAVA Doc - Remote")
