@@ -1,0 +1,12 @@
+# ninja log v5
+0	404	1663536228190442133	CMakeFiles/fichiers_Exo1_TCP.dir/main.c.o	5f738549150d0770
+1	827	1663536474671948193	CMakeFiles/fichiers_Exo1_TCP.dir/serveur.c.o	fce6cd479bab2e49
+1	363	1663536510671961770	CMakeFiles/fichiers_Exo1_TCP.dir/client.c.o	e1f8cfc7100184d0
+1	642	1663537100469773392	CMakeFiles/fichiers_Exo1_TCP_Serveur.dir/serveur.c.o	4e83a212d4643ba1
+643	757	1663537100595172421	fichiers_Exo1_TCP_Serveur	b522375f76b32397
+0	121	1663537108701227636	CMakeFiles/fichiers_Exo1_TCP_Client.dir/client.c.o	3305cda970ec4869
+122	219	1663537108800505534	fichiers_Exo1_TCP_Client	9781ba565726289d
+2	1085	1663537835324586476	CMakeFiles/fichiers_Exo1_TCP_Serveur.dir/serveur.c.o	4e83a212d4643ba1
+1085	1240	1663537835492257390	fichiers_Exo1_TCP_Serveur	b522375f76b32397
+3	98	1663537836821543373	CMakeFiles/fichiers_Exo1_TCP_Client.dir/client.c.o	3305cda970ec4869
+98	196	1663537836916667739	fichiers_Exo1_TCP_Client	9781ba565726289d
