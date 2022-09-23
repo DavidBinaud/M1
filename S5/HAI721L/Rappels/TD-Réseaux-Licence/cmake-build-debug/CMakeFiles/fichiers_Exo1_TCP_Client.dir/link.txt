@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 "D:\CLion 2022.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\fichiers_Exo1_TCP_Client.dir/objects.a
 "D:\CLion 2022.2.3\bin\mingw\bin\ar.exe" qc CMakeFiles\fichiers_Exo1_TCP_Client.dir/objects.a @CMakeFiles\fichiers_Exo1_TCP_Client.dir\objects1.rsp
 "D:\CLion 2022.2.3\bin\mingw\bin\gcc.exe" -g -Wl,--whole-archive CMakeFiles\fichiers_Exo1_TCP_Client.dir/objects.a -Wl,--no-whole-archive -o fichiers_Exo1_TCP_Client.exe -Wl,--out-implib,libfichiers_Exo1_TCP_Client.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\fichiers_Exo1_TCP_Client.dir\linklibs.rsp
+=======
+/usr/bin/cc -g CMakeFiles/fichiers_Exo1_TCP_Client.dir/client.c.o -o fichiers_Exo1_TCP_Client 
+>>>>>>> 382e4dcd387cdc6ff28ce238cbbe673b3b10a9b5

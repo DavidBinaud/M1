@@ -8,6 +8,7 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
+<<<<<<< HEAD
 				<Option working_dir="C:/Users/doudy/Documents/1MPORTANT/Moi/Education/M1/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
@@ -20,10 +21,25 @@
 			<Target title="fichiers_Exo1_TCP_Serveur">
 				<Option output="C:/Users/doudy/Documents/1MPORTANT/Moi/Education/M1/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/fichiers_Exo1_TCP_Serveur.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="C:/Users/doudy/Documents/1MPORTANT/Moi/Education/M1/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug"/>
+=======
+				<Option working_dir="/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="fichiers_Exo1_TCP_Serveur">
+				<Option output="/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/fichiers_Exo1_TCP_Serveur" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug"/>
+>>>>>>> 382e4dcd387cdc6ff28ce238cbbe673b3b10a9b5
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
 					<Add directory="D:/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
 					<Add directory="D:/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
 					<Add directory="D:/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
@@ -39,10 +55,28 @@
 			<Target title="fichiers_Exo1_TCP_Serveur/fast">
 				<Option output="C:/Users/doudy/Documents/1MPORTANT/Moi/Education/M1/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/fichiers_Exo1_TCP_Serveur.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="C:/Users/doudy/Documents/1MPORTANT/Moi/Education/M1/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug"/>
+=======
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 fichiers_Exo1_TCP_Serveur"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="fichiers_Exo1_TCP_Serveur/fast">
+				<Option output="/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/fichiers_Exo1_TCP_Serveur" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug"/>
+>>>>>>> 382e4dcd387cdc6ff28ce238cbbe673b3b10a9b5
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
 					<Add directory="D:/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
 					<Add directory="D:/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
 					<Add directory="D:/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
@@ -58,10 +92,28 @@
 			<Target title="fichiers_Exo1_TCP_Client">
 				<Option output="C:/Users/doudy/Documents/1MPORTANT/Moi/Education/M1/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/fichiers_Exo1_TCP_Client.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="C:/Users/doudy/Documents/1MPORTANT/Moi/Education/M1/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug"/>
+=======
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 fichiers_Exo1_TCP_Serveur/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="fichiers_Exo1_TCP_Client">
+				<Option output="/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/fichiers_Exo1_TCP_Client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug"/>
+>>>>>>> 382e4dcd387cdc6ff28ce238cbbe673b3b10a9b5
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
 					<Add directory="D:/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
 					<Add directory="D:/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
 					<Add directory="D:/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
@@ -77,10 +129,28 @@
 			<Target title="fichiers_Exo1_TCP_Client/fast">
 				<Option output="C:/Users/doudy/Documents/1MPORTANT/Moi/Education/M1/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/fichiers_Exo1_TCP_Client.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="C:/Users/doudy/Documents/1MPORTANT/Moi/Education/M1/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug"/>
+=======
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 fichiers_Exo1_TCP_Client"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="fichiers_Exo1_TCP_Client/fast">
+				<Option output="/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/fichiers_Exo1_TCP_Client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug"/>
+>>>>>>> 382e4dcd387cdc6ff28ce238cbbe673b3b10a9b5
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
 					<Add directory="D:/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
 					<Add directory="D:/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
 					<Add directory="D:/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
@@ -121,6 +191,48 @@
 			<Option target="fichiers_Exo1_TCP_Serveur"/>
 		</Unit>
 		<Unit filename="C:/Users/doudy/Documents/1MPORTANT/Moi/Education/M1/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/CMakeLists.txt">
+=======
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 fichiers_Exo1_TCP_Client/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/client.c">
+			<Option target="fichiers_Exo1_TCP_Client"/>
+		</Unit>
+		<Unit filename="/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/serveur.c">
+			<Option target="fichiers_Exo1_TCP_Serveur"/>
+		</Unit>
+		<Unit filename="/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/CMakeLists.txt">
+>>>>>>> 382e4dcd387cdc6ff28ce238cbbe673b3b10a9b5
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
