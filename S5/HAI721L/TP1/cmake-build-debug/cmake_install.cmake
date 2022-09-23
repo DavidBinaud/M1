@@ -1,4 +1,4 @@
-# Install script for directory: /home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence
+# Install script for directory: /home/e20180001426/Bureau/M1/S5/HAI721L/TP1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/e20180001426/Bureau/M1/S5/HAI721L/TP1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

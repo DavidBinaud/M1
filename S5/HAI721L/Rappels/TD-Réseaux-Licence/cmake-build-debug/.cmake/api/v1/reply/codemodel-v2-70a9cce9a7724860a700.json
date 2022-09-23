@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.23"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "fichiers_Exo1_TCP",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "fichiers_Exo1_TCP_Client::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fichiers_Exo1_TCP_Client-Debug-6136cf8c92e43232913f.json",
+					"name" : "fichiers_Exo1_TCP_Client",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "fichiers_Exo1_TCP_Serveur::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fichiers_Exo1_TCP_Serveur-Debug-599525fd69a328007a46.json",
+					"name" : "fichiers_Exo1_TCP_Serveur",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-R\u00e9seaux-Licence/cmake-build-debug",
+		"source" : "/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-R\u00e9seaux-Licence"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
