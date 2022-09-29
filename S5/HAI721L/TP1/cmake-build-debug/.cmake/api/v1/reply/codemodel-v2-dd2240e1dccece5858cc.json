@@ -16,8 +16,7 @@
 					"targetIndexes" : 
 					[
 						0,
-						1,
-						2
+						1
 					]
 				}
 			],
@@ -33,8 +32,7 @@
 					"targetIndexes" : 
 					[
 						0,
-						1,
-						2
+						1
 					]
 				}
 			],
@@ -42,22 +40,15 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "TP1-main::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-TP1-main-Debug-2a2d924412e61f6ada43.json",
-					"name" : "TP1-main",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
 					"id" : "TP1-processus::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-TP1-processus-Debug-58c2895890f1e7d8dc4e.json",
+					"jsonFile" : "target-TP1-processus-Debug-2c1a4fb7e78c1b1bec7d.json",
 					"name" : "TP1-processus",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "TP1-serveur::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-TP1-serveur-Debug-df4ef187b8fe0cd22369.json",
+					"jsonFile" : "target-TP1-serveur-Debug-15a142fe8d071fa26644.json",
 					"name" : "TP1-serveur",
 					"projectIndex" : 0
 				}
@@ -67,8 +58,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/e20180001426/Bureau/M1/S5/HAI721L/TP1/cmake-build-debug",
-		"source" : "/home/e20180001426/Bureau/M1/S5/HAI721L/TP1"
+		"build" : "/Users/davidbinaud/Documents/Univ5/M1/S5/HAI721L/TP1/cmake-build-debug",
+		"source" : "/Users/davidbinaud/Documents/Univ5/M1/S5/HAI721L/TP1"
 	},
 	"version" : 
 	{

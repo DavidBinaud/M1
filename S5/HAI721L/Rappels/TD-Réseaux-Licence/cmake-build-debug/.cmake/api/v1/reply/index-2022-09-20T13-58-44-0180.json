@@ -1,0 +1,147 @@
+{
+	"cmake" : 
+	{
+		"generator" : 
+		{
+			"multiConfig" : false,
+			"name" : "MinGW Makefiles"
+		},
+		"paths" : 
+		{
+<<<<<<< HEAD:S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/.cmake/api/v1/reply/index-2022-09-20T13-58-44-0180.json
+			"cmake" : "D:/CLion 2022.2.3/bin/cmake/win/bin/cmake.exe",
+			"cpack" : "D:/CLion 2022.2.3/bin/cmake/win/bin/cpack.exe",
+			"ctest" : "D:/CLion 2022.2.3/bin/cmake/win/bin/ctest.exe",
+			"root" : "D:/CLion 2022.2.3/bin/cmake/win/share/cmake-3.23"
+=======
+			"cmake" : "/home/e20180001426/clion-2022.2.3/bin/cmake/linux/bin/cmake",
+			"cpack" : "/home/e20180001426/clion-2022.2.3/bin/cmake/linux/bin/cpack",
+			"ctest" : "/home/e20180001426/clion-2022.2.3/bin/cmake/linux/bin/ctest",
+			"root" : "/home/e20180001426/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23"
+>>>>>>> 382e4dcd387cdc6ff28ce238cbbe673b3b10a9b5:S5/HAI721L/TP1/cmake-build-debug/.cmake/api/v1/reply/index-2022-09-23T09-01-16-0855.json
+		},
+		"version" : 
+		{
+			"isDirty" : false,
+			"major" : 3,
+			"minor" : 23,
+			"patch" : 2,
+			"string" : "3.23.2",
+			"suffix" : ""
+		}
+	},
+	"objects" : 
+	[
+		{
+<<<<<<< HEAD:S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/.cmake/api/v1/reply/index-2022-09-20T13-58-44-0180.json
+			"jsonFile" : "codemodel-v2-479df0e6024915f4cc3f.json",
+=======
+			"jsonFile" : "codemodel-v2-9359758419a102bfce47.json",
+>>>>>>> 382e4dcd387cdc6ff28ce238cbbe673b3b10a9b5:S5/HAI721L/TP1/cmake-build-debug/.cmake/api/v1/reply/index-2022-09-23T09-01-16-0855.json
+			"kind" : "codemodel",
+			"version" : 
+			{
+				"major" : 2,
+				"minor" : 4
+			}
+		},
+		{
+<<<<<<< HEAD:S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/.cmake/api/v1/reply/index-2022-09-20T13-58-44-0180.json
+			"jsonFile" : "cache-v2-00c2230ff403c474a19f.json",
+=======
+			"jsonFile" : "cache-v2-da6ad689fe50497eb967.json",
+>>>>>>> 382e4dcd387cdc6ff28ce238cbbe673b3b10a9b5:S5/HAI721L/TP1/cmake-build-debug/.cmake/api/v1/reply/index-2022-09-23T09-01-16-0855.json
+			"kind" : "cache",
+			"version" : 
+			{
+				"major" : 2,
+				"minor" : 0
+			}
+		},
+		{
+<<<<<<< HEAD:S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/.cmake/api/v1/reply/index-2022-09-20T13-58-44-0180.json
+			"jsonFile" : "cmakeFiles-v1-4dd182d0347dc0a7948e.json",
+=======
+			"jsonFile" : "cmakeFiles-v1-f51047de599a019d6d8a.json",
+>>>>>>> 382e4dcd387cdc6ff28ce238cbbe673b3b10a9b5:S5/HAI721L/TP1/cmake-build-debug/.cmake/api/v1/reply/index-2022-09-23T09-01-16-0855.json
+			"kind" : "cmakeFiles",
+			"version" : 
+			{
+				"major" : 1,
+				"minor" : 0
+			}
+		},
+		{
+<<<<<<< HEAD:S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/.cmake/api/v1/reply/index-2022-09-20T13-58-44-0180.json
+			"jsonFile" : "toolchains-v1-9ca51d322973e873fb00.json",
+=======
+			"jsonFile" : "toolchains-v1-e08abe09ec0b17341edb.json",
+>>>>>>> 382e4dcd387cdc6ff28ce238cbbe673b3b10a9b5:S5/HAI721L/TP1/cmake-build-debug/.cmake/api/v1/reply/index-2022-09-23T09-01-16-0855.json
+			"kind" : "toolchains",
+			"version" : 
+			{
+				"major" : 1,
+				"minor" : 0
+			}
+		}
+	],
+	"reply" : 
+	{
+		"cache-v2" : 
+		{
+<<<<<<< HEAD:S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/.cmake/api/v1/reply/index-2022-09-20T13-58-44-0180.json
+			"jsonFile" : "cache-v2-00c2230ff403c474a19f.json",
+=======
+			"jsonFile" : "cache-v2-da6ad689fe50497eb967.json",
+>>>>>>> 382e4dcd387cdc6ff28ce238cbbe673b3b10a9b5:S5/HAI721L/TP1/cmake-build-debug/.cmake/api/v1/reply/index-2022-09-23T09-01-16-0855.json
+			"kind" : "cache",
+			"version" : 
+			{
+				"major" : 2,
+				"minor" : 0
+			}
+		},
+		"cmakeFiles-v1" : 
+		{
+<<<<<<< HEAD:S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/.cmake/api/v1/reply/index-2022-09-20T13-58-44-0180.json
+			"jsonFile" : "cmakeFiles-v1-4dd182d0347dc0a7948e.json",
+=======
+			"jsonFile" : "cmakeFiles-v1-f51047de599a019d6d8a.json",
+>>>>>>> 382e4dcd387cdc6ff28ce238cbbe673b3b10a9b5:S5/HAI721L/TP1/cmake-build-debug/.cmake/api/v1/reply/index-2022-09-23T09-01-16-0855.json
+			"kind" : "cmakeFiles",
+			"version" : 
+			{
+				"major" : 1,
+				"minor" : 0
+			}
+		},
+		"codemodel-v2" : 
+		{
+<<<<<<< HEAD:S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/.cmake/api/v1/reply/index-2022-09-20T13-58-44-0180.json
+			"jsonFile" : "codemodel-v2-479df0e6024915f4cc3f.json",
+=======
+			"jsonFile" : "codemodel-v2-9359758419a102bfce47.json",
+>>>>>>> 382e4dcd387cdc6ff28ce238cbbe673b3b10a9b5:S5/HAI721L/TP1/cmake-build-debug/.cmake/api/v1/reply/index-2022-09-23T09-01-16-0855.json
+			"kind" : "codemodel",
+			"version" : 
+			{
+				"major" : 2,
+				"minor" : 4
+			}
+		},
+		"toolchains-v1" : 
+		{
+<<<<<<< HEAD:S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/.cmake/api/v1/reply/index-2022-09-20T13-58-44-0180.json
+			"jsonFile" : "toolchains-v1-9ca51d322973e873fb00.json",
+=======
+			"jsonFile" : "toolchains-v1-e08abe09ec0b17341edb.json",
+>>>>>>> 382e4dcd387cdc6ff28ce238cbbe673b3b10a9b5:S5/HAI721L/TP1/cmake-build-debug/.cmake/api/v1/reply/index-2022-09-23T09-01-16-0855.json
+			"kind" : "toolchains",
+			"version" : 
+			{
+				"major" : 1,
+				"minor" : 0
+			}
+		}
+	}
+}
