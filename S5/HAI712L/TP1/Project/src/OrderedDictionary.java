@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class OrderedDictionary extends AbstractDictionary{
 
     public OrderedDictionary() {
@@ -17,19 +19,19 @@ public class OrderedDictionary extends AbstractDictionary{
 
     @Override
     public int newIndexOf(Object key) {
-        Object[] newArrayKeys = new Object[size()+1];
-        Object[] newArrayValues = new Object[size()+1];
-        for (int i = 0; i < size(); i++) {
-            newArrayKeys[i] = this.arrayKeys[i];
-            newArrayValues[i] = this.arrayValues[i];
+        int size = this.size();
+        if(size == this.arrayKeys.length){
+            this.grow();
+            return arrayKeys.length - 1;
         }
-        int indexToInsert = size();
-        this.arrayKeys = newArrayKeys;
-        this.arrayValues = newArrayValues;
-
-        return indexToInsert;
+        else return size;
     }
 
+    private void grow(){
+        int indexToInsert = size();
+        this.arrayKeys = Arrays.copyOf(arrayKeys, indexToInsert+1);
+        this.arrayValues = Arrays.copyOf(arrayValues, indexToInsert+1);
+    }
     @Override
     public int size() {
         return this.arrayKeys.length;

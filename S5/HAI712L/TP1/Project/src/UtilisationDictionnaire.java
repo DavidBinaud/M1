@@ -14,5 +14,7 @@ public class UtilisationDictionnaire {
         System.out.println("Le dictionnaire contient la clé 'TestKey20'? " + dic.containsKey("TestKey20"));
 
         System.out.println("La valeur de la clé 'TestKey6' est : '" + dic.get("TestKey6") + "'");
+
+        System.out.println(dic);
     }
 }
