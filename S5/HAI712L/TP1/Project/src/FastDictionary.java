@@ -11,6 +11,8 @@ public class FastDictionary extends AbstractDictionary{
     public int indexOf(Object key) {
         int hashCode = key.hashCode();
         int index = hashCode  % arrayKeys.length;
+
+        //Il faut utiliser un do while pour passer sur tout le tableau
         while (arrayKeys[index] != key && index < arrayKeys.length){
             index++;
         }
