@@ -5,6 +5,7 @@
 #include <sys/socket.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <string.h>
 
 // Rôle du serveur : accepter la demande de connexion d'un client,
 // recevoir une chaîne de caractères, afficher cette chaîne et
@@ -12,15 +13,13 @@
 
 int main(int argc, char *argv[])
 {
-  // je passe en paramètre un numero de port pour la socket
+  // je passe en paramètre un numero de port pour la socket et le nombre de processus
   // d'écoute. Je teste donc le passage de paramètres
   
   if (argc<3){
     printf("utilisation: %s numero_port nombre_de_processus\n", argv[0]);
     exit(1);
   }
-
-    char *address[atoi(argv[2])];
   
   /* Etape 1 : créer une socket (la socket qui permettra de recevoir
      les demandes de connexion.*/
@@ -33,14 +32,10 @@ int main(int argc, char *argv[])
     exit(1); // je choisis ici d'arrêter le programme car le reste
 	     // dépendent de la réussite de la création de la socket.
   }
-  
 
-  // J'alimente le programme avec traces d'exécution pour observer ce
-  // qui se produit à l'exécution et mieux localiser les erreurs. 
+
   printf("Serveur: creation de la socket : ok\n");
 
-
-  // Je peux déjà tester l'exécution de cette étape avant de passer à la suite.
   
   /* Etape 2 : nommer la socket. Elle aura une ou des IP de la machine
      sur laquelle le programme sera exécuté et le numéro de port passé
@@ -61,68 +56,25 @@ int main(int argc, char *argv[])
   // je continue à alimenter le programme avec traces d'exécution
   printf("Serveur: nommage : ok\n");
 
-
-  // Je peux tester l'exécution de cette étape avant de passer à la suite.
-
-
-  /* Etape 3 : mise en ecoute de la socket nommée. Cette opération
-     dédie la socket à la réception des demandes de connexion. Pour
-     cet exercice, limiter la file des demandes de connexions à 5. */
-  
-/*  int ecoute = listen(ds, 5);
-  if (ecoute < 0){
-    printf("Serveur : je suis sourd(e)\n");
-    close (ds);
-    exit (1);
-  } */
- 
-  // je continue à alimenter le programme avec traces d'exécution
-//  printf("Serveur: mise en écoute : ok\n");
-
-  // Je peux tester l'exécution de cette étape avant de passer à la suite.
-
- 
-  /* etape 4 : attendre et traiter une demande de connexion d'un
-     client. Rappel : lorsque le serveur accepte une demande de
-     connexion, il crée une nouvelle socket. Cette dernière est
-     connectée à celle du client et elle est à utiliser pour
-     communiquer avec lui.*/
-
-  // avant un appel à une fonction bloquante, il est intéressant
-  // d'afficher un message le signalant. Vous saurez ainsi à quelle
-  // étape de l'exécution le blocage se produit.
   printf("Serveur : j'attend un message d'un client \n");
   
-  struct sockaddr_in adCv ; // pour obtenir l'adresse du client accepté.
-  socklen_t lgCv = sizeof (struct sockaddr_in);
-
-  //Le client peut quand même déposer des octets même si la connexion n'est pas acceptée
-    //char m[3];
-    //fgets(m, sizeof(m), stdin);
-//  int dsCv = accept(ds, (struct sockaddr*)&adCv, &lgCv);
-//  if (dsCv < 0){ // je pense toujours à traiter les valeurs de retour.
-//    perror ( "Serveur, probleme accept :");
-//    close(ds);
-//    exit (1);
-//  }
-  /* je peux afficher l'adresse de la socket du client accepté :
-     adresse IP et numéro de port de la structure adCv. Attention à
-     faire les conversions du format réseau vers le format
-     hôte. Utiliser la fonction inet_ntoa(..) pour l'IP.*/
-//  printf("Serveur: le client %s:%d est connecté  \n", inet_ntoa(adCv.sin_addr), ntohs(adCv.sin_port));
 
   // Je peux tester l'exécution de cette étape avant de passer à la suite.
- 
-  /* Etape 5 : réception d'un message de type chaîne de caractères */
+
+  /* Etape 3 : réception d'un message de type chaîne de caractères */
   int numberOfProcess = 0;
   int numberOfProcessMax = atoi(argv[2]);
+
+  struct sockaddr_in sockaddrInOfAllProcess[numberOfProcessMax];
   while(numberOfProcess < numberOfProcessMax) {
-      printf("Server: Client %d\n", numberOfProcess);
+      struct sockaddr_in sockaddrInClient ; // pour obtenir l'adresse du client accepté.
+      socklen_t lgCv = sizeof (struct sockaddr_in);
+
       char buffer[50];
       /* attendre un message dont la taille maximale est 500 octets. Pour
          cet exercice, il est demandé de ne faire qu'un seul appel à recv
          pour recevoir un message. */
-      int rcv = recvfrom(ds, buffer, sizeof(buffer) - 1, 0, (struct sockaddr *) &adCv, &lgCv);
+      int rcv = recvfrom(ds, buffer, sizeof(buffer) - 1, 0, (struct sockaddr *) &sockaddrInClient, &lgCv);
 
       /* Traiter TOUTES les valeurs de retour (voir le cours ou la documentation). */
       if (rcv == -1) {
@@ -137,32 +89,40 @@ int main(int argc, char *argv[])
           exit(1);
       }
       buffer[rcv] = '\0';
+
+
+      char* token = strtok(buffer , "-");
+      char* indiceOfProcess = token;
+      token = strtok(NULL, "-");
+      char* port = token;
+
+
+      int indice = atoi(indiceOfProcess);
+      sockaddrInOfAllProcess[indice] = sockaddrInClient;
+
+      printf("Server: Client %s sur le port %s\n", indiceOfProcess, port);
+
+      printf("On a séparé la chaine de caractères\n");
       /* Afficher le nombre d'octets EFFECTIVEMENT reçus. : /!\ Faire la
          différence entre le nombre d'octets qu'on demande à extraire
          depuis le buffer de réception d'une socket et le nombre d'octets
          qu'on a effectivement réussi à extraire.*/
-
-      printf("Serveur : j'ai recu %d octets \n", rcv);
+      char address[INET_ADDRSTRLEN];
+      inet_ntop(AF_INET, &sockaddrInClient.sin_addr, address, INET_ADDRSTRLEN);
       printf("Serveur : contenu du message : %s \n\n", buffer);
       numberOfProcess++;
   }
-  // Je peux tester l'exécution de cette étape avant de passer à la suite.
-  
-  /* Etape 6 : répondre au client en lui envoyant le nombre d'octets
-     effectivement reçus à l'étape 5. Pour cet exercice, faire un seul
-     appel de la fonction send.*/ 
-  //int snd = send(...);
-  
-  /* Traiter TOUTES les valeurs de retour (voir le cours ou la documentation). */
 
-  //...
-
+    printf("Liste des structures des processus:\n");
+    for (int i = 0; i < numberOfProcessMax; ++i) {
+        char address[INET_ADDRSTRLEN];
+        inet_ntop(AF_INET, &sockaddrInOfAllProcess[i].sin_addr, address, INET_ADDRSTRLEN);
+        printf("%d:%s ", i, address);
+    }
+    printf("\n");
     
   /* Etape 7 : fermeture de la socket du client */ 
   printf("Serveur : fin du dialogue avec le client\n");
-//  close (dsCv);
-  
-  // Etape 8 : pour cet exercice, je ne traite qu'un client, donc, je termine proprement.
   close (ds);
   printf("Serveur : je termine\n");
 }

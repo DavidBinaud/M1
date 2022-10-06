@@ -37,11 +37,9 @@ int main(int argc, char *argv[]) {
         // dépendent de la réussite de la création de la socket.
     }
 
-    /* J'alimente le programme avec des traces d'exécution pour observer ce
-       qui se produit à l'exécution et pour mieux localiser les erreurs. */
+
     printf("Client: creation de la socket : ok\n");
 
-    // Je peux déjà tester l'exécution de cette étape avant de passer à la suite.
 
     /* Etape 2 : designer la socket du serveur : avoir une structure qui
        contient l'adresse de cette socket (IP + numéro de port. */
@@ -57,22 +55,15 @@ int main(int argc, char *argv[]) {
 
     int lgAdr = sizeof(struct sockaddr_in);
 
-    /* Etape 3 : envoyer une demande de connexion au serveur.*/
-//    int conn = connect(ds, (struct sockaddr *) &adrServ, lgAdr);
-
-    // je traite les valeurs de retour
-//    if (conn < 0) {
-//        perror("Client: pb au connect :");
-//        close(ds); // je libère les ressources avant de terminer.
-//        exit(1); // je choisi de quitter le programme : la suite dépend
-//        // de la réussite de l'envoi de la demande de connexion.
-//    }
-    // je continue à alimenter le programme avec traces d'exécution
-//    printf("Client : demande de connexion au serveur reussie \n");
 
     printf("indice fait %d octets\n", strlen(indice));
+    char* indiceAndPort = indice;
+    strcat(indiceAndPort, "-");
+    //
+    strcat(indiceAndPort, argv[2]);
+    printf("indice et port: %s\n", indiceAndPort);
     /* j'envoie mon indice au serveur */
-    int snd = sendto(ds, indice, strlen(indice), 0, (const struct sockaddr *) &adrServ, lgAdr);
+    int snd = sendto(ds, indiceAndPort, strlen(indiceAndPort), 0, (const struct sockaddr *) &adrServ, lgAdr);
     if (snd < 1) {
         perror("Client: pb au send indice :");
         close(ds); // je libère les ressources avant de terminer.
@@ -155,6 +146,8 @@ int main(int argc, char *argv[]) {
         exit(1); // je choisi de quitter le programme : la suite dépend
         // de la réussite de l'envoi de la demande de connexion.
     }
+
+    //accept
 
 
     //strlen +1 car la fonction strlen ne compte pas le '\0'
