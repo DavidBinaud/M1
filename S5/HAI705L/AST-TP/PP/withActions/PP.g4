@@ -1,70 +1,72 @@
-// $Id$
+/*
+    David Binaud - Hamza Ikiou - Master M1 GL
+*/
 
 grammar PP;
 
-prog returns [PPProg progVal]:
+prog returns [PPProg value]:
     declarationVariables
     declarationsFuncProc
 	instructions
 	EOF
-	{ $progVal = new PPProg($declarationVariables.value, $declarationFuncProc.value, $instructions.value); }
+	{ $value = new PPProg($declarationVariables.value, $declarationsFuncProc.value, $instructions.value); }
 	;
 
 //Declarations of func and proc
-declarationsFuncProc returns [ArrayList<PPDef> defs]
-@init{ $defs = new ArrayList<PPDef>; } :
-    ( funcProc { $defs.add($funcProc.value); } )*
+declarationsFuncProc returns [ArrayList<PPDef> value]
+@init{ $value = new ArrayList<PPDef>(); } :
+    ( funcProc { $value.add($funcProc.value); } )*
     ;
 
 //Declaration of a func or Proc
-funcProc returns [PPDef def]:
-    funcName=ID'(' declarationArgs ')' (':' returnType=types)?
+funcProc returns [PPDef value]:
+    (funcName=ID'(' declarationArgs ')' (':' returnType=types)?
     localVars=declarationVariables
-    instructions
-    {   if($returnType){
-            $def = new PPFun($declarationArgs.value, $localVars.value, $instructions.value, $returnType.value);
+    instructions)
+    {   if($returnType.value != null){
+            $value = new PPFun($funcName.text, $declarationArgs.value, $localVars.value, $instructions.value, $returnType.value);
         } else {
-            $def = new PPProc($declarationArgs.value, $localVars.value, $instructions.value);
+            $value = new PPProc($funcName.text, $declarationArgs.value, $localVars.value, $instructions.value);
         }
     }
     ;
 
 //Arg declaration for func or proc
-declarationArgs returns [ArrayList<Pair<String,Type>> args]
-@init{ $args = new ArrayList<Pair<String,Type>>; } :
-    (argName=ID ':' argType=types { $args.add(new Pair($argName.text, $argType.value)); } )*
+declarationArgs returns [ArrayList<Pair<String,Type>> value]
+@init{ $value = new ArrayList<Pair<String,Type>>(); } :
+    (argName=ID ':' argType=types { $value.add(new Pair($argName.text, $argType.value)); } )*
     ;
 
 //Var declarations for prog, func or proc
-declarationVariables  returns [ArrayList<Pair<String,Type>> list]
-@init{ $list = new ArrayList<Pair<String,Type>>; } :
-    ('var' (ID ':' types {$list.add(new Pair($ID.text, $types.value)); } )+)?
+declarationVariables  returns [ArrayList<Pair<String,Type>> value]
+@init{ $value = new ArrayList<Pair<String,Type>>(); } :
+    ('var' (ID ':' types {$value.add(new Pair($ID.text, $types.value)); } )+)?
     ;
 
-instructions returns [PPInst inst]:
-    ID ':''=' expr                                                              { $inst = new PPAssign($ID.text, $expr.value); }                                |
-    array=expr '[' index=expr ']' ':''=' expr                                   { $inst = new PPArraySet($array.value, $index.value, $expr.value); }            |
-    'if' cond=expr 'then' trueInst=instructions 'else' falseInst=instructions 	{ $inst = new PPCond($cond.value, $trueInst.value, $falseInst.value); }         |
-    'while' cond=expr 'do' instructions	                                        { $inst = new PPWhile($cond.value, $instructions.value); }					    |
+instructions returns [PPInst value]:
+    ID ':''=' expr                                                              { $value = new PPAssign($ID.text, $expr.value); }                                |
+    array=expr '[' index=expr ']' ':''=' expr                                   { $value = new PPArraySet($array.value, $index.value, $expr.value); }            |
+    'if' cond=expr 'then' trueInst=instructions 'else' falseInst=instructions 	{ $value = new PPCond($cond.value, $trueInst.value, $falseInst.value); }         |
+    'while' cond=expr 'do' instructions	                                        { $value = new PPWhile($cond.value, $instructions.value); }					    |
     procCall							                                                                                                                        |
-    'skip'		                                                                { $inst = new PPSkip(); }										                |
-    inst1=instructions ';' inst2=instructions                                   { $inst = new PPSeq($inst1.value, $inst2.value); }
+    'skip'		                                                                { $value = new PPSkip(); }										                |
+    inst1=instructions ';' inst2=instructions                                   { $value = new PPSeq($inst1.value, $inst2.value); }
     ;
 
 //Call to a proc
-procCall returns [PPProcCall inst]:
-    phi '(' callArgs ')' { $inst = new PPProcCall($phi.text, $args.value); }
+procCall returns [PPProcCall value]:
+    phi '(' callArgs ')' { $value = new PPProcCall($phi.value, $callArgs.value); }
     ;
 
 //Call arguments for functions or proc
-callArgs returns [ArrayList<PPExpr> list]
-@init{ $list = new ArrayList<PPExpr>(); } :
-    ( e = expr { $list.add($e.value); } )*
+callArgs returns [ArrayList<PPExpr> value]
+@init{ $value = new ArrayList<PPExpr>(); } :
+    ( e = expr { $value.add($e.value); } )*
     ;
 
 // Expression
 expr returns [PPExpr value]:
-    const                                       { $value = $const.value; }                              |
+    c=const                                       { $value = $c.value; }                              |
     ID                                          { $value = new PPVar($ID.text); }                       |
     '-' expr                                    { $value = new PPInv($expr.value); }                    |
     'not' expr                                  { $value = new PPNot($expr.value); }                    |
@@ -86,13 +88,17 @@ expr returns [PPExpr value]:
     ;
 
 //Call to a function
-funCall returns [PPFunCall inst]:
-    phi '(' callArgs ')' { $inst = new PPFunCall($phi.text, $callArgs.value); }
+funCall returns [PPFunCall value]:
+    phi '(' callArgs ')' { $value = new PPFunCall($phi.value, $callArgs.value); }
     ;
 
 
 // Call target
-phi: 'read' | 'write' | ID;
+phi returns [Callee value]:
+    'read'  { $value = new Read(); }        |
+    'write' { $value = new Write(); }       |
+    ID      { $value = new User($ID.text); }
+    ;
 
 // types
 types returns [Type value]:
