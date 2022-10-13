@@ -1,4 +1,7 @@
 // UPP.java
+/*
+    David Binaud - Hamza Ikiou - Master M1 GL
+*/
 
 import java.util.*;
 
@@ -103,7 +106,7 @@ class UPPNot extends UPPUnOp {
     RTLInst toRTL (ArrayList<Pair<String,PRegister>> locals,
                    ArrayList<String> globals, PRegister reg, RTLInst succ) {
         PRegister regE1 = e.getPRegister(locals);
-        RTLInst not = new RTLXOri(regE1, reg, succ);
+        RTLInst not = new RTLXOri(reg, regE1, succ);
         return e.toRTL(locals,globals,regE1,not);
     }//toRTL
 
@@ -463,12 +466,12 @@ class UPPCond extends UPPInst {
 
     RTLInst toRTL (ArrayList<Pair<String,PRegister>> locals,
                    ArrayList<String> globals, RTLInst succ) {
-
+        PRegister regCond = cond.getPRegister(locals);
         RTLInst branchTrue = i1.toRTL(locals, globals, succ);
         RTLInst branchFalse = i2.toRTL(locals, globals, succ);
-        cond.
-        RTLBinBranch nbranch = new RTLBinBranch( branchTrue, branchFalse)
-
+        RTLGtz gtz = new RTLGtz(regCond,branchTrue,branchFalse);
+        RTLInst ncond = cond.toRTL(locals,globals,regCond,gtz);
+        return ncond;
     }//toRTL
 
 }//UPPCond
@@ -507,7 +510,14 @@ class UPPProcCall extends UPPInst {
 
     RTLInst toRTL (ArrayList<Pair<String,PRegister>> locals,
                    ArrayList<String> globals, RTLInst succ) {
-        //To do
+        ArrayList<PRegister> regs = new ArrayList<PRegister>();
+        for (UPPExpr e : args)
+            regs.add(e.getPRegister(locals));
+        RTLInst fun = new RTLProcCall(callee,regs, succ);
+        RTLInst acc = fun;
+        for (int i = args.size() - 1; i >= 0; i--)
+            acc = args.get(i).toRTL(locals,globals,regs.get(i),acc);
+        return acc;
     }//toRTL
 
 }//UPPProcCall
@@ -532,7 +542,8 @@ class UPPSeq extends UPPInst {
 
     RTLInst toRTL (ArrayList<Pair<String,PRegister>> locals,
                    ArrayList<String> globals, RTLInst succ) {
-        //To do
+        RTLInst ni2 = i2.toRTL(locals, globals, succ);
+        return i1.toRTL(locals, globals, ni2);
     }//toRTL        
 
 }//UPPSeq
