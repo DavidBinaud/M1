@@ -9,27 +9,33 @@ public class FastDictionary extends AbstractDictionary{
 
     @Override
     public int indexOf(Object key) {
-        int hashCode = key.hashCode();
+        int hashCode = Math.abs(key.hashCode());
         int index = hashCode  % arrayKeys.length;
+        int i = index;
 
+        if(this.arrayKeys[i] != null && this.arrayKeys[i].equals(key)) return i;
         //Il faut utiliser un do while pour passer sur tout le tableau
-        while (arrayKeys[index] != key && index < arrayKeys.length){
-            index++;
-        }
-        //On renvoi -1 si on a dépassé la fin du tableau, l'index sinon
-        return index > arrayKeys.length ? -1 : index;
+        do {
+            i = (i+1) % arrayKeys.length;
+            if(arrayKeys[i] != null && arrayKeys[i].equals(key)) return i;
+        }while (i != index);
+
+        return -1;
     }
 
     @Override
     public int newIndexOf(Object key) {
         if(mustGrow()) grow();
-        int hashcode = key.hashCode();
+
+        //Abs pour negatif
+        int hashcode = Math.abs(key.hashCode());
         int newIndex = hashcode % arrayKeys.length;
 
-        while(arrayKeys[newIndex] != null){
-            if(newIndex >= arrayKeys.length) newIndex = newIndex % arrayKeys.length;
-            else newIndex++;
-        }
+        if(this.arrayKeys[newIndex] == null) return newIndex;
+
+        do{
+            newIndex = (newIndex+1) % arrayKeys.length;
+        }while(arrayKeys[newIndex] != null);
 
         return newIndex;
     }
@@ -47,9 +53,25 @@ public class FastDictionary extends AbstractDictionary{
         return this.size() > this.arrayKeys.length * (3/4);
     }
 
+    /*
+        Grow va modifier la place des éléments par rapport à leur place avant d'agrandir
+     */
     public void grow(){
-        int newLength = (int)Math.ceil(this.size() * (5/4));
-        this.arrayKeys = Arrays.copyOf(arrayKeys, newLength);
-        this.arrayValues = Arrays.copyOf(arrayValues, newLength);
+        int newLength = (int)Math.ceil(this.arrayKeys.length * (5/4));
+
+        Object[] oldKeyArray = this.arrayKeys;
+        Object[] oldValueArray = this.arrayValues;
+
+        this.arrayKeys = new Object[newLength];
+        this.arrayValues = new Object[newLength];
+
+        for (int i = 0; i < oldKeyArray.length; i++) {
+            if(oldKeyArray[i] != null){
+                this.put(oldKeyArray[i], oldValueArray[i]);
+/*                int indexToInsert = this.newIndexOf(oldKeyArray[i]);
+                this.arrayKeys[indexToInsert] = oldKeyArray[i];
+                this.arrayValues[indexToInsert] = oldValueArray[i];*/
+            }
+        }
     }
 }

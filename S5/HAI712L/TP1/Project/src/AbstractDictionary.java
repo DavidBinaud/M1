@@ -20,7 +20,7 @@ public abstract class AbstractDictionary implements IDictionnary{
     @Override
     public Object get(Object key) {
         int index = this.indexOf(key);
-        if(index != 1){
+        if(index != -1){
             return arrayValues[index];
         }
         return null;
