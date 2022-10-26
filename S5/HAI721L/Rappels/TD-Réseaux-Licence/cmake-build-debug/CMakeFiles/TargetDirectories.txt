@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-C:/Users/doudy/Documents/1MPORTANT/Moi/Education/M1/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/CMakeFiles/fichiers_Exo1_TCP_Serveur.dir
-C:/Users/doudy/Documents/1MPORTANT/Moi/Education/M1/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/CMakeFiles/fichiers_Exo1_TCP_Client.dir
-C:/Users/doudy/Documents/1MPORTANT/Moi/Education/M1/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/doudy/Documents/1MPORTANT/Moi/Education/M1/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-=======
 /home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/CMakeFiles/fichiers_Exo1_TCP_Serveur.dir
 /home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/CMakeFiles/fichiers_Exo1_TCP_Client.dir
 /home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/CMakeFiles/rebuild_cache.dir
->>>>>>> 382e4dcd387cdc6ff28ce238cbbe673b3b10a9b5

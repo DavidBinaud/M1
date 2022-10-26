@@ -2,10 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "fichiers_Exo1_TCP_Client.exe"
-		},
-		{
-			"path" : "fichiers_Exo1_TCP_Client.pdb"
+			"path" : "fichiers_Exo1_TCP_Client"
 		}
 	],
 	"backtrace" : 1,
@@ -71,16 +68,12 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
-			},
-			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
-				"role" : "libraries"
 			}
 		],
 		"language" : "C"
 	},
 	"name" : "fichiers_Exo1_TCP_Client",
-	"nameOnDisk" : "fichiers_Exo1_TCP_Client.exe",
+	"nameOnDisk" : "fichiers_Exo1_TCP_Client",
 	"paths" : 
 	{
 		"build" : ".",

@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.23"
@@ -41,22 +41,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "fichiers_Exo1_TCP_Client::@6890427a1f51a3e7e1df",
-<<<<<<< HEAD:S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-479df0e6024915f4cc3f.json
-					"jsonFile" : "target-fichiers_Exo1_TCP_Client-Debug-1b4e8efa909846ff5989.json",
-=======
 					"jsonFile" : "target-fichiers_Exo1_TCP_Client-Debug-6136cf8c92e43232913f.json",
->>>>>>> 382e4dcd387cdc6ff28ce238cbbe673b3b10a9b5:S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-70a9cce9a7724860a700.json
 					"name" : "fichiers_Exo1_TCP_Client",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "fichiers_Exo1_TCP_Serveur::@6890427a1f51a3e7e1df",
-<<<<<<< HEAD:S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-479df0e6024915f4cc3f.json
-					"jsonFile" : "target-fichiers_Exo1_TCP_Serveur-Debug-728d9ff08633e4da1aa8.json",
-=======
 					"jsonFile" : "target-fichiers_Exo1_TCP_Serveur-Debug-599525fd69a328007a46.json",
->>>>>>> 382e4dcd387cdc6ff28ce238cbbe673b3b10a9b5:S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-70a9cce9a7724860a700.json
 					"name" : "fichiers_Exo1_TCP_Serveur",
 					"projectIndex" : 0
 				}
@@ -66,13 +58,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-<<<<<<< HEAD:S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-479df0e6024915f4cc3f.json
-		"build" : "C:/Users/doudy/Documents/1MPORTANT/Moi/Education/M1/M1/S5/HAI721L/Rappels/TD-R\u00e9seaux-Licence/cmake-build-debug",
-		"source" : "C:/Users/doudy/Documents/1MPORTANT/Moi/Education/M1/M1/S5/HAI721L/Rappels/TD-R\u00e9seaux-Licence"
-=======
 		"build" : "/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-R\u00e9seaux-Licence/cmake-build-debug",
 		"source" : "/home/e20180001426/Bureau/M1/S5/HAI721L/Rappels/TD-R\u00e9seaux-Licence"
->>>>>>> 382e4dcd387cdc6ff28ce238cbbe673b3b10a9b5:S5/HAI721L/Rappels/TD-Réseaux-Licence/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-70a9cce9a7724860a700.json
 	},
 	"version" : 
 	{
