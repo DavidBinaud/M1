@@ -1,7 +1,7 @@
 // UPP.java
-/*
-    David Binaud - Hamza Ikiou - Master M1 GL
-*/
+/***********************************************/
+/*   David Binaud - Hamza Ikiou - Master M1 GL */
+/***********************************************/
 
 import java.util.*;
 
@@ -106,7 +106,7 @@ class UPPNot extends UPPUnOp {
     RTLInst toRTL (ArrayList<Pair<String,PRegister>> locals,
                    ArrayList<String> globals, PRegister reg, RTLInst succ) {
         PRegister regE1 = e.getPRegister(locals);
-        RTLInst not = new RTLXOri(reg, regE1, succ);
+        RTLInst not = new RTLXOri(regE1, reg, succ);
         return e.toRTL(locals,globals,regE1,not);
     }//toRTL
 
@@ -513,8 +513,8 @@ class UPPProcCall extends UPPInst {
         ArrayList<PRegister> regs = new ArrayList<PRegister>();
         for (UPPExpr e : args)
             regs.add(e.getPRegister(locals));
-        RTLInst fun = new RTLProcCall(callee,regs, succ);
-        RTLInst acc = fun;
+        RTLInst proc = new RTLProcCall(callee,regs, succ);
+        RTLInst acc = proc;
         for (int i = args.size() - 1; i >= 0; i--)
             acc = args.get(i).toRTL(locals,globals,regs.get(i),acc);
         return acc;
